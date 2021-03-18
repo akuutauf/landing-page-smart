@@ -1,0 +1,112 @@
+// Font
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&display=swap");
+
+// Variabel
+$colorTheme: #e48b1c;
+$colorSecondary: #e0ad30;
+$textColor: #2c2a55;
+$textSecondary: #6578c4;
+
+// Style
+body {
+  font-family: "Lato", sans-serif;
+  background-image: url(../img/ilustrator.svg);
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: 60vmax;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  min-height: 800px;
+}
+
+// Navbar
+.custom-nav {
+  margin-top: 1em;
+
+  #navbarBrand {
+    color: $colorSecondary;
+    font-weight: 500;
+  }
+  #navbarNav {
+    ul {
+      li {
+        a {
+          color: white;
+          font-weight: 500;
+          margin-left: 2em;
+          transition: 0.5 color ease;
+
+          &:hover {
+            color: black;
+          }
+        }
+      }
+    }
+    .navbar-nav {
+      .sign-up-botton {
+        a {
+          transition: 0.3s color ease;
+          background-color: white;
+          padding: 0.5em 1em;
+          color: black;
+          border: 1px solid transparent;
+
+          &:hover {
+            background-color: transparent;
+            padding: 0.5em 1em;
+            color: white;
+            border: 1px solid white;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Content
+.custom-container {
+  margin-top: 6em;
+
+  .custom-row {
+    .custom-col {
+      h1 {
+        color: $textColor;
+        font-weight: 700;
+      }
+      p {
+        color: $textSecondary;
+      }
+
+      .row {
+        .col-4 {
+          a {
+            transition: 0.3s color ease;
+            background-color: $colorTheme;
+            padding: 0.6em 1em;
+            color: white;
+            border: 1px solid transparent;
+            border-radius: 2em;
+
+            &:hover {
+              background-color: transparent;
+              padding: 0.6em 1em;
+              color: $colorTheme;
+              border: 1px solid $colorTheme;
+              border-radius: 2em;
+            }
+          }
+        }
+        .col-8 {
+          @media screen and(max-width: 1000px) {
+            a {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
